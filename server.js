@@ -1,6 +1,12 @@
-import express from 'express';
+import express from "express";
+
 var app = express();
-app.get('/', function (req, res) {
-res.send("Welocme to GeeksforGeeks!");
+
+app.get("/", function (req, res) {
+  res.status(201).json("Welocme to Form-Builder-Backend!");
 });
-app.listen(5000);
+
+const port = 5000;
+app.listen(port, ()=>{
+    console.log(`Server connected to https://localhost:${port}`);
+});
